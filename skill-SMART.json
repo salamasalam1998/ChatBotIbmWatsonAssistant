@@ -1,0 +1,612 @@
+{
+  "intents": [
+    {
+      "intent": "Achievements",
+      "examples": [
+        {
+          "text": "accomplishment"
+        },
+        {
+          "text": "Achievements"
+        },
+        {
+          "text": "fulfillment"
+        },
+        {
+          "text": "what is your achievements?"
+        }
+      ],
+      "description": "if the user wants to know the achievements of the company."
+    },
+    {
+      "intent": "contact",
+      "examples": [
+        {
+          "text": "admins"
+        },
+        {
+          "text": "call"
+        },
+        {
+          "text": "CEO"
+        },
+        {
+          "text": "contact"
+        },
+        {
+          "text": "email"
+        },
+        {
+          "text": "founder"
+        },
+        {
+          "text": "number"
+        },
+        {
+          "text": "supervisor"
+        },
+        {
+          "text": "supervisors"
+        },
+        {
+          "text": "Your email"
+        }
+      ],
+      "description": "if user wants to contact the company."
+    },
+    {
+      "intent": "Funny",
+      "examples": [
+        {
+          "text": "fun"
+        },
+        {
+          "text": "joke"
+        },
+        {
+          "text": "laugh"
+        },
+        {
+          "text": "meme"
+        },
+        {
+          "text": "memes"
+        },
+        {
+          "text": "tell me a joke"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "general_questions",
+      "examples": [
+        {
+          "text": "are you ok ?"
+        },
+        {
+          "text": "How are you?"
+        },
+        {
+          "text": "How are you doing?"
+        },
+        {
+          "text": "How’s it going?"
+        },
+        {
+          "text": "What’s up?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "message",
+      "examples": [
+        {
+          "text": "company message"
+        },
+        {
+          "text": "message"
+        },
+        {
+          "text": "smartmethods message"
+        },
+        {
+          "text": "your message"
+        }
+      ],
+      "description": "if the user wants to know the message of the company , smartmethods."
+    },
+    {
+      "intent": "specificQuestions",
+      "examples": [
+        {
+          "text": "Are you a robot ?"
+        },
+        {
+          "text": "How are you programmed ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "summertraining_coop",
+      "examples": [
+        {
+          "text": "coop"
+        },
+        {
+          "text": "full-stack"
+        },
+        {
+          "text": "intership"
+        },
+        {
+          "text": "interships"
+        },
+        {
+          "text": "students"
+        },
+        {
+          "text": "summer"
+        },
+        {
+          "text": "summer training"
+        },
+        {
+          "text": "summertraining"
+        },
+        {
+          "text": "train"
+        },
+        {
+          "text": "training"
+        }
+      ],
+      "description": "if the user wants to know about the summer training and coop for students."
+    },
+    {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "glad"
+        },
+        {
+          "text": "grateful"
+        },
+        {
+          "text": "thank"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "thx"
+        }
+      ],
+      "description": "if the user thanks the bot !"
+    },
+    {
+      "intent": "theCompany",
+      "examples": [
+        {
+          "text": "smart methods"
+        },
+        {
+          "text": "training"
+        },
+        {
+          "text": "what is Smart Methods ?"
+        },
+        {
+          "text": "your company"
+        }
+      ],
+      "description": "general information about SmartMethods"
+    },
+    {
+      "intent": "vision",
+      "examples": [
+        {
+          "text": "company vision"
+        },
+        {
+          "text": "goal"
+        },
+        {
+          "text": "smartmethods vision"
+        },
+        {
+          "text": "vision"
+        },
+        {
+          "text": "your vision"
+        }
+      ],
+      "description": "if the user want to know the vision of SmartMethods"
+    },
+    {
+      "intent": "website",
+      "examples": [
+        {
+          "text": "home page"
+        },
+        {
+          "text": "homepage"
+        },
+        {
+          "text": "http"
+        },
+        {
+          "text": "link"
+        },
+        {
+          "text": "url"
+        },
+        {
+          "text": "web page"
+        },
+        {
+          "text": "website"
+        },
+        {
+          "text": "your homepage"
+        }
+      ],
+      "description": "if the user wants to visit the website of the company."
+    },
+    {
+      "intent": "Welcome",
+      "examples": [
+        {
+          "text": "halo"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "You are most Welcome!"
+        },
+        {
+          "text": "مرحبا"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Training",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1628984417909",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "generalQuestions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am fine, what about you?"
+              },
+              {
+                "text": "I am doing well , and you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#general_questions",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1628171353024",
+      "previous_sibling": "node_7_1628125507639"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Our vision is To be the first representative in the Kingdom of Saudi Arabia for the manufacture of robotics, artificial intelligence, control systems and automation"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#vision",
+      "dialog_node": "node_3_1628982729230",
+      "previous_sibling": "node_8_1628179095809"
+    },
+    {
+      "type": "standard",
+      "title": "Achievements",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We have 843 registered innovations, 675 scientific research supported, 36 manufactured robots and 1,657 electronic circuits implemented and we hope you will be part of our future success."
+              },
+              {
+                "text": "We have a customer service robot that can be programmed to do all the tasks of a customer service employee\nAvailable for purchase and rent with the possibility of adding any modifications."
+              },
+              {
+                "text": "We have a coffee serving robot where to serve coffee to your guests in a modern way\nAvailable for purchase and rent with the possibility of adding any modifications."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Achievements",
+      "dialog_node": "node_4_1628983125814",
+      "previous_sibling": "node_5_1628982870222"
+    },
+    {
+      "type": "standard",
+      "title": "training ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We offer summer internships for university students who have an undergraduate requirement as well as students interested in learning. The training is divided into five tracks, which are the mechanical engineering track, the electrical and power engineering track, the artificial intelligence track, the programming track and the Internet of Things, and finally the industrial engineering track. Students can participate in a specific track or participate in an entire full-stack program where they have to perform a number of tasks from each track. We provide a free affidavit at the end of the training that the student has passed the training program, as well as a certified and approved certificate in the amount of 600 Saudi riyals."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#summertraining_coop",
+      "dialog_node": "node_4_1628984181564",
+      "previous_sibling": "node_7_1628983732797"
+    },
+    {
+      "type": "standard",
+      "title": "thanks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You are most welcome!"
+              },
+              {
+                "text": "I am glad to help you !"
+              },
+              {
+                "text": "That is your kindness !"
+              },
+              {
+                "text": "Welcome and keep in touch !"
+              },
+              {
+                "text": "Welcome and take care !"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thanks",
+      "dialog_node": "node_4_1628984417909",
+      "previous_sibling": "node_4_1628984181564"
+    },
+    {
+      "type": "standard",
+      "title": "message",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Our message is to transform the technology generation from users to producers and developers"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#message",
+      "dialog_node": "node_5_1628982870222",
+      "previous_sibling": "node_3_1628982729230"
+    },
+    {
+      "type": "standard",
+      "title": "contact",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can contact us via :\nphone:0580202718\nemail :info@s-m.com.sa"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#contact",
+      "dialog_node": "node_5_1628983518048",
+      "previous_sibling": "node_4_1628983125814"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You are most welcome!"
+              },
+              {
+                "text": "How can I serve you? "
+              },
+              {
+                "text": "I am in your service !"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Welcome",
+      "dialog_node": "node_7_1628125507639",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "website",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "our website : https://www.s-m.com.sa/ "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#website",
+      "dialog_node": "node_7_1628983732797",
+      "previous_sibling": "node_5_1628983518048"
+    },
+    {
+      "type": "standard",
+      "title": "theCompany",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Smart Methods is a national commercial enterprise established in 2010 AD registered with the Ministry of Commerce and specialized in automated equipment, robotics and artificial intelligence."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#theCompany",
+      "dialog_node": "node_8_1628179095809",
+      "previous_sibling": "node_9_1628173472332"
+    },
+    {
+      "type": "standard",
+      "title": "specificQuestions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes, I am a robot. I am programmed to understand your questions and requests. I simply try to figure out your word or synonyms, then match it with my database to give the appropriate response. Know that I can be trained!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#specificQuestions",
+      "dialog_node": "node_9_1628173472332",
+      "previous_sibling": "node_2_1628171353024"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome !"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "SMART",
+  "language": "en",
+  "description": ""
+}
